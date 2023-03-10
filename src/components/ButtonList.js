@@ -9,7 +9,7 @@ const ButtonList = () => {
       <Button name="Songs" />
       <Button name="Live" />
       <Button name="Soccer" />
-      <Button name="Cricket" />
+      <Button name="Movies" />
       <Button name="Cooking" />
       <Button name="Valentines" />
       <Button name="Rain" />
