@@ -1,20 +1,13 @@
 import React from "react";
 import Button from "./Button";
+import { BUTTON_LIST } from "../utils/constants";
 
 const ButtonList = () => {
   return (
     <div className="flex">
-      <Button name="All" />
-      <Button name="Gaming" />
-      <Button name="Songs" />
-      <Button name="Live" />
-      <Button name="Soccer" />
-      <Button name="Movies" />
-      <Button name="Cooking" />
-      <Button name="Valentines" />
-      <Button name="Rain" />
-      <Button name="Soft" />
-      <Button name="Clay" />
+      {BUTTON_LIST.map((e, i) => (
+        <Button name={e} key={i} />
+      ))}
     </div>
   );
 };
