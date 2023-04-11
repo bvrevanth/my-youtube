@@ -1,6 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHouse,
+  faTicket,
+  faDisplay,
+} from "@fortawesome/free-solid-svg-icons";
 
 const SideBar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
@@ -10,12 +16,18 @@ const SideBar = () => {
   return (
     <div className="p-5 shadow-lg w-48">
       <ul>
-        <Link to="/">
-          <li>Home</li>
-        </Link>
-        <li>Shorts</li>
-        <li>Videos</li>
-        <li>Live</li>
+        <li>
+          <FontAwesomeIcon icon={faHouse} className="mr-4 text-lg" />
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <FontAwesomeIcon icon={faTicket} className="mr-4 text-lg" />
+          <Link to="/">Shorts</Link>
+        </li>
+        <li>
+          <FontAwesomeIcon icon={faDisplay} className="mr-4 text-lg" />
+          <Link to="/">Videos</Link>
+        </li>
       </ul>
       <h1 className="font-bold pt-5">Subscriptions</h1>
       <ul>
